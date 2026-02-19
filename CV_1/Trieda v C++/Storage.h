@@ -8,15 +8,14 @@
 #pragma once
 
 class Storage {
-public:
-    Storage(double maxCapacity);
-    bool add(double amount);
-    double getPercentage() const;
-    double release();
-
-private:
-    double maxCapacity_;
-    double currentValue_;
+    public:
+        Storage(double maxCapacity);
+        bool add(double amount);
+        double getPercentage() const;
+        double release();
+    private:
+        double maxCapacity_;
+        double currentValue_;
 };
 
 
