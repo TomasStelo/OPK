@@ -1,0 +1,6 @@
+V tomto subore su testy a ucenie sa classov/objectov.
+Mimo priecinku Define a Method Inside the Class je obycajne linkovanie objektu k danemu source file.
+
+Vnutri priecinka sa nachadzaju objekty ktore pouzivaju funkcie vonku alebo vnutri objektu.
+
+Kompilovatelne jednoducho (g++ source.cpp -o program).
