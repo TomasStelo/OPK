@@ -1,11 +1,15 @@
-# CLion
+# ===== IDE =====
 .idea/
 
-# CMake build folders
-cmake-build-debug/
-cmake-build-release/
+# ===== Build / binaries =====
+CV_1/Trieda\ v\ C++/Storage
+CV_1/Trieda\ v\ C++/storage
+CV_1/Trieda\ v\ C++/*.o
+CV_1/Trieda\ v\ C++/*.out
+CV_1/Trieda\ v\ C++/*.exe
+CV_1/Trieda\ v\ C++/cmake-build-debug/
+CV_1/Trieda\ v\ C++/cmake-build-release/
 
-# compiled files
-*.o
-*.out
-*.exe
+# ===== OS / system files =====
+.DS_Store
+Thumbs.db
