@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/testy_srandy.dir/testy_srandy.cpp.o -o testy_srandy 

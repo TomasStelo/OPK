@@ -1,0 +1,2 @@
+/home/tomas/CLionProjects/untitled/OPK/CMakeFiles/edit_cache.dir
+/home/tomas/CLionProjects/untitled/OPK/CMakeFiles/rebuild_cache.dir
