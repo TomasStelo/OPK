@@ -1,0 +1,3 @@
+/home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+/home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+/home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

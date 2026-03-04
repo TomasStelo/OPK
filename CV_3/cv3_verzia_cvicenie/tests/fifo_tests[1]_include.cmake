@@ -1,0 +1,5 @@
+if(EXISTS "/home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/tests/fifo_tests[1]_tests.cmake")
+  include("/home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/tests/fifo_tests[1]_tests.cmake")
+else()
+  add_test(fifo_tests_NOT_BUILT fifo_tests_NOT_BUILT)
+endif()

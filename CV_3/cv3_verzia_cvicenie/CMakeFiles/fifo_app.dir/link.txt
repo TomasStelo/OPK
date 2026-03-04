@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/fifo_app.dir/main.cpp.o -o fifo_app  src/fifo_lib/libfifo_lib.a 

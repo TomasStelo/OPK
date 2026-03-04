@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfifo_lib.a CMakeFiles/fifo_lib.dir/camera_frame.cpp.o CMakeFiles/fifo_lib.dir/frame_fifo.cpp.o CMakeFiles/fifo_lib.dir/list_node.cpp.o
+/usr/bin/ranlib libfifo_lib.a

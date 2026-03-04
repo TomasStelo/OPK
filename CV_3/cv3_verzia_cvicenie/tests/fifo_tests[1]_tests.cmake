@@ -1,0 +1,5 @@
+add_test([=[CameraFIFO.NewFrameFIFOIsEmpty]=]  /home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/tests/fifo_tests [==[--gtest_filter=CameraFIFO.NewFrameFIFOIsEmpty]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CameraFIFO.NewFrameFIFOIsEmpty]=]  PROPERTIES WORKING_DIRECTORY /home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[FrameFifoBlackBox.PushBackTwiceSizeTwo]=]  /home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/tests/fifo_tests [==[--gtest_filter=FrameFifoBlackBox.PushBackTwiceSizeTwo]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[FrameFifoBlackBox.PushBackTwiceSizeTwo]=]  PROPERTIES WORKING_DIRECTORY /home/tomas/CLionProjects/untitled/OPK/CV_3/cv3_verzia_cvicenie/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  fifo_tests_TESTS CameraFIFO.NewFrameFIFOIsEmpty FrameFifoBlackBox.PushBackTwiceSizeTwo)
