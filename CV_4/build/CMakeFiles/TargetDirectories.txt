@@ -1,0 +1,3 @@
+/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles/Cvicenie_4.dir
+/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles/edit_cache.dir
+/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles/rebuild_cache.dir

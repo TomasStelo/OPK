@@ -3,7 +3,7 @@
 #include <vector>
 #include <memory>
 #include "types/Geometry.h"
-#include "environment/Environment.h"
+#include "Environment.h"
 
 namespace lidar {
 
@@ -16,9 +16,13 @@ struct Config {
 
 class Lidar {
 public:
-    Lidar(const Config& config, std::shared_ptr<environment::Environment> env);
+    Lidar(const Config& config, std::shared_ptr<environment::Environment> environment);
 
     std::vector<geometry::Point2d> scan(const geometry::RobotState& state) const;
+
+private:
+    Config config_;
+    std::shared_ptr<environment::Environment> environment_;
 };
 
 } // namespace lidar
