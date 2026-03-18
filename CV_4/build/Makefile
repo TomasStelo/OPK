@@ -129,6 +129,30 @@ Cvicenie_4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cvicenie_4.dir/build.make CMakeFiles/Cvicenie_4.dir/build
 .PHONY : Cvicenie_4/fast
 
+src/Canvas.o: src/Canvas.cpp.o
+.PHONY : src/Canvas.o
+
+# target to build an object file
+src/Canvas.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cvicenie_4.dir/build.make CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o
+.PHONY : src/Canvas.cpp.o
+
+src/Canvas.i: src/Canvas.cpp.i
+.PHONY : src/Canvas.i
+
+# target to preprocess a source file
+src/Canvas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cvicenie_4.dir/build.make CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.i
+.PHONY : src/Canvas.cpp.i
+
+src/Canvas.s: src/Canvas.cpp.s
+.PHONY : src/Canvas.s
+
+# target to generate assembly for a file
+src/Canvas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cvicenie_4.dir/build.make CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.s
+.PHONY : src/Canvas.cpp.s
+
 src/Environment.o: src/Environment.cpp.o
 .PHONY : src/Environment.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Cvicenie_4"
+	@echo "... src/Canvas.o"
+	@echo "... src/Canvas.i"
+	@echo "... src/Canvas.s"
 	@echo "... src/Environment.o"
 	@echo "... src/Environment.i"
 	@echo "... src/Environment.s"

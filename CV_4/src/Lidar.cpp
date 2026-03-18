@@ -1,8 +1,9 @@
 #include "../include/Lidar.h"
+#include "../include/types/Geometry.h"
+
 #include <cmath>
 #include <iostream>
 #include <memory>
-#include "../include/types/Geometry.h"
 
 namespace lidar {
 

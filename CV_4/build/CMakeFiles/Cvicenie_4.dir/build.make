@@ -69,10 +69,24 @@ include CMakeFiles/Cvicenie_4.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Cvicenie_4.dir/flags.make
 
+CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o: CMakeFiles/Cvicenie_4.dir/flags.make
+CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o: /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Canvas.cpp
+CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o: CMakeFiles/Cvicenie_4.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o -MF CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o.d -o CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o -c /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Canvas.cpp
+
+CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Canvas.cpp > CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.i
+
+CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Canvas.cpp -o CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.s
+
 CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o: CMakeFiles/Cvicenie_4.dir/flags.make
 CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o: /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Environment.cpp
 CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o: CMakeFiles/Cvicenie_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o -MF CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o.d -o CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o -c /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Environment.cpp
 
 CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.s: cmake_force
 CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o: CMakeFiles/Cvicenie_4.dir/flags.make
 CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o: /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Lidar.cpp
 CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o: CMakeFiles/Cvicenie_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o -MF CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o.d -o CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o -c /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Lidar.cpp
 
 CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.s: cmake_force
 CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o: CMakeFiles/Cvicenie_4.dir/flags.make
 CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o: /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Robot.cpp
 CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o: CMakeFiles/Cvicenie_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o -MF CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o.d -o CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o -c /home/tomas/CLionProjects/untitled/OPK/CV_4/src/Robot.cpp
 
 CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.s: cmake_force
 CMakeFiles/Cvicenie_4.dir/src/main.cpp.o: CMakeFiles/Cvicenie_4.dir/flags.make
 CMakeFiles/Cvicenie_4.dir/src/main.cpp.o: /home/tomas/CLionProjects/untitled/OPK/CV_4/src/main.cpp
 CMakeFiles/Cvicenie_4.dir/src/main.cpp.o: CMakeFiles/Cvicenie_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Cvicenie_4.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Cvicenie_4.dir/src/main.cpp.o -MF CMakeFiles/Cvicenie_4.dir/src/main.cpp.o.d -o CMakeFiles/Cvicenie_4.dir/src/main.cpp.o -c /home/tomas/CLionProjects/untitled/OPK/CV_4/src/main.cpp
 
 CMakeFiles/Cvicenie_4.dir/src/main.cpp.i: cmake_force
@@ -127,6 +141,7 @@ CMakeFiles/Cvicenie_4.dir/src/main.cpp.s: cmake_force
 
 # Object files for target Cvicenie_4
 Cvicenie_4_OBJECTS = \
+"CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o" \
 "CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o" \
 "CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o" \
 "CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o" \
@@ -135,6 +150,7 @@ Cvicenie_4_OBJECTS = \
 # External object files for target Cvicenie_4
 Cvicenie_4_EXTERNAL_OBJECTS =
 
+Cvicenie_4: CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o
 Cvicenie_4: CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o
 Cvicenie_4: CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o
 Cvicenie_4: CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o
@@ -196,7 +212,7 @@ Cvicenie_4: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.6.0
 Cvicenie_4: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0
 Cvicenie_4: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
 Cvicenie_4: CMakeFiles/Cvicenie_4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Cvicenie_4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tomas/CLionProjects/untitled/OPK/CV_4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Cvicenie_4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Cvicenie_4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o"
+  "CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o.d"
   "CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o"
   "CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o.d"
   "CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o"

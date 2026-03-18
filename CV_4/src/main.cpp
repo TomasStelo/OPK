@@ -1,8 +1,31 @@
 #include "../include/Environment.h"
 #include "../include/Robot.h"
 #include "../include/Lidar.h"
+#include "../include/Canvas.h"
+
 #include <memory>
+
 #include <opencv4/opencv2/opencv.hpp>
+
+// Struct pre mouse callback
+struct MouseData {
+    robot::Robot* robot;
+    double resolution;
+};
+
+// Mouse callback funkcia
+void mouseCallback(int event, int x, int y, int flags, void* userdata) {
+    if (event == cv::EVENT_LBUTTONDOWN) {
+        MouseData* data = static_cast<MouseData*>(userdata);
+
+        // Konvertuj pixel koordináty na svetové koordináty
+        double world_x = x * data->resolution;
+        double world_y = y * data->resolution;
+
+        // Nastav robota na novú pozíciu
+        data->robot->setPosition(world_x, world_y, 0.0);
+    }
+}
 
 int main() {
     // --- Environment ---
@@ -11,7 +34,10 @@ int main() {
     environment_config.resolution = 0.05;
     std::shared_ptr<environment::Environment> environment_ptr = std::make_shared<environment::Environment>(environment_config);
 
-    cv::Mat& canvas = environment_ptr->getCanvasRef(); // hlavný canvas
+    // --- Canvas ---
+    canvas::Config canvas_config;
+    canvas_config.resolution = environment_config.resolution;
+    canvas::Canvas my_canvas(canvas_config, environment_ptr->getCanvasRef(), environment_ptr);
     cv::namedWindow("Map", cv::WINDOW_NORMAL);
 
     // --- Robot ---
@@ -21,6 +47,12 @@ int main() {
 
     robot::Robot my_robot(robot_config);
 
+    // --- Mouse Callback ---
+    MouseData mouse_data;
+    mouse_data.robot = &my_robot;
+    mouse_data.resolution = environment_config.resolution;
+    cv::setMouseCallback("Map", mouseCallback, &mouse_data);
+
     // spawn do stredu mapy
     double spawn_x = environment_ptr->getWidth() / 2.0;
     double spawn_y = environment_ptr->getHeight() / 2.0;
@@ -28,10 +60,10 @@ int main() {
 
     // --- Lidar ---
     lidar::Config lidar_config;
-    lidar_config.max_range = 5.0;
+    lidar_config.max_range = 10.0;
     lidar_config.beam_count = 36;
-    lidar_config.first_ray_angle = -3.14159;
-    lidar_config.last_ray_angle = 3.14159;
+    lidar_config.first_ray_angle = -3.14159 / 2;
+    lidar_config.last_ray_angle = 3.14159 / 2;
     lidar::Lidar my_lidar(lidar_config, environment_ptr);
 
     // --- Loop ---
@@ -43,32 +75,20 @@ int main() {
         switch (key) {
             case 'w': velocity.linear = 0.5; break;
             case 's': velocity.linear = -0.5; break;
-            case 'a': velocity.angular = -0.5; break;   // zvýšená rotácia
+            case 'a': velocity.angular = -0.5; break;
             case 'd': velocity.angular = 0.5; break;
             case 27: running = false; break;
         }
         my_robot.update(velocity, robot_config.command_duration);
 
         auto points = my_lidar.scan(my_robot.getState());
-
-        // vykreslenie priamo do hlavného canvasu
-        cv::Mat display;
-        canvas.copyTo(display);
-
         auto state = my_robot.getState();
-        int robot_x = static_cast<int>(state.x / environment_config.resolution);
-        int robot_y = static_cast<int>(state.y / environment_config.resolution);
 
-        cv::circle(display, cv::Point(robot_x, robot_y), 5, cv::Scalar(0, 0, 255), -1);
-
-        for (auto& p : points) {
-            int px = static_cast<int>(p.x / environment_config.resolution);
-            int py = static_cast<int>(p.y / environment_config.resolution);
-            // Zelené Lidar lúče
-            cv::line(display, cv::Point(robot_x, robot_y), cv::Point(px, py), cv::Scalar(0, 255, 0), 1);
-        }
-
-        cv::imshow("Map", display);
+        // Canvas vykreslovanie
+        my_canvas.resetBackground(environment_ptr->getCanvasRef());
+        my_canvas.drawRobot(state);
+        my_canvas.drawLidarRays(state, points);
+        my_canvas.display("Map");
     }
 
     cv::destroyAllWindows();

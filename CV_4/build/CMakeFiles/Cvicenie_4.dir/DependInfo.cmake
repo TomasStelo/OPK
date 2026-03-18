@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/tomas/CLionProjects/untitled/OPK/CV_4/src/Canvas.cpp" "CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o" "gcc" "CMakeFiles/Cvicenie_4.dir/src/Canvas.cpp.o.d"
   "/home/tomas/CLionProjects/untitled/OPK/CV_4/src/Environment.cpp" "CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o" "gcc" "CMakeFiles/Cvicenie_4.dir/src/Environment.cpp.o.d"
   "/home/tomas/CLionProjects/untitled/OPK/CV_4/src/Lidar.cpp" "CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o" "gcc" "CMakeFiles/Cvicenie_4.dir/src/Lidar.cpp.o.d"
   "/home/tomas/CLionProjects/untitled/OPK/CV_4/src/Robot.cpp" "CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o" "gcc" "CMakeFiles/Cvicenie_4.dir/src/Robot.cpp.o.d"
