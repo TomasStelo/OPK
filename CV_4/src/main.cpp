@@ -4,13 +4,15 @@
 #include "../include/Canvas.h"
 
 #include <memory>
+#include <vector>
 
 #include <opencv4/opencv2/opencv.hpp>
 
 // Struct pre mouse callback
 struct MouseData {
-    robot::Robot* robot;
+    std::vector<std::unique_ptr<robot::Robot>>* robots;
     double resolution;
+    robot::Config* robot_config;
 };
 
 // Mouse callback funkcia
@@ -22,8 +24,10 @@ void mouseCallback(int event, int x, int y, int flags, void* userdata) {
         double world_x = x * data->resolution;
         double world_y = y * data->resolution;
 
-        // Nastav robota na novú pozíciu
-        data->robot->setPosition(world_x, world_y, 0.0);
+        // Vytvor nového robota
+        auto new_robot = std::make_unique<robot::Robot>(*data->robot_config);
+        new_robot->setPosition(world_x, world_y, 0.0);
+        data->robots->push_back(std::move(new_robot));
     }
 }
 
@@ -45,23 +49,27 @@ int main() {
     robot_config.command_duration = 0.1;
     robot_config.simulation_period_ms = 50;
 
-    robot::Robot my_robot(robot_config);
+    std::vector<std::unique_ptr<robot::Robot>> robots;
+
+    // Vytvor prvého robota
+    auto first_robot = std::make_unique<robot::Robot>(robot_config);
+    double spawn_x = environment_ptr->getWidth() / 2.0;
+    double spawn_y = environment_ptr->getHeight() / 2.0;
+    first_robot->setPosition(spawn_x, spawn_y, 0.0);
+    robots.push_back(std::move(first_robot));
 
     // --- Mouse Callback ---
     MouseData mouse_data;
-    mouse_data.robot = &my_robot;
+    mouse_data.robots = &robots;
     mouse_data.resolution = environment_config.resolution;
+    mouse_data.robot_config = &robot_config;
     cv::setMouseCallback("Map", mouseCallback, &mouse_data);
 
-    // spawn do stredu mapy
-    double spawn_x = environment_ptr->getWidth() / 2.0;
-    double spawn_y = environment_ptr->getHeight() / 2.0;
-    my_robot.setPosition(spawn_x, spawn_y, 0.0);
 
     // --- Lidar ---
     lidar::Config lidar_config;
     lidar_config.max_range = 10.0;
-    lidar_config.beam_count = 36;
+    lidar_config.beam_count = 36; //36
     lidar_config.first_ray_angle = -3.14159 / 2;
     lidar_config.last_ray_angle = 3.14159 / 2;
     lidar::Lidar my_lidar(lidar_config, environment_ptr);
@@ -79,15 +87,21 @@ int main() {
             case 'd': velocity.angular = 0.5; break;
             case 27: running = false; break;
         }
-        my_robot.update(velocity, robot_config.command_duration);
 
-        auto points = my_lidar.scan(my_robot.getState());
-        auto state = my_robot.getState();
+        // Updatuj len posledného robota (ten najnovšie spawnutý)
+        if (!robots.empty()) {
+            robots.back()->update(velocity, robot_config.command_duration);
+        }
 
-        // Canvas vykreslovanie
+        // Vykresli všetkých robotov
         my_canvas.resetBackground(environment_ptr->getCanvasRef());
-        my_canvas.drawRobot(state);
-        my_canvas.drawLidarRays(state, points);
+        for (auto& robot : robots) {
+            auto state = robot->getState();
+            auto points = my_lidar.scan(state);
+
+            my_canvas.drawRobot(state);
+            my_canvas.drawLidarRays(state, points);
+        }
         my_canvas.display("Map");
     }
 
